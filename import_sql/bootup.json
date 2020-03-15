@@ -1,0 +1,54 @@
+[
+  {
+    "model": "user.permission",
+    "pk": 1,
+    "fields": {
+      "name": "User Management",
+      "code": "user_management",
+      "active": true,
+      "created_at": "2019-07-31 00:00:00.000000",
+      "updated_at": "2019-07-31 00:00:00.000000"
+    }
+  },
+  {
+    "model": "user.role",
+    "pk": 1,
+    "fields": {
+      "name": "Admin",
+      "code": "admin",
+      "active": true,
+      "created_at": "2019-07-31 00:00:00.000000",
+      "updated_at": "2019-07-31 00:00:00.000000",
+      "permission": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "user.role",
+    "pk": 2,
+    "fields": {
+      "name": "General User",
+      "code": "general",
+      "active": true,
+      "created_at": "2019-07-31 00:00:00.000000",
+      "updated_at": "2019-07-31 00:00:00.000000",
+      "permission": []
+    }
+  },
+  {
+    "model": "user.UserProfile",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$9U0ScFUXmPf1$LxGHVipZwsUOJMVoVll9uuq+pNWh9bibBruP8qiBTeA=",
+      "is_superuser": true,
+      "email": "admin@vms.dev",
+      "username": "admin",
+      "first_name": "Administrator",
+      "last_name": "Administrator",
+      "is_active": true,
+      "role": 1,
+      "user_permissions": []
+    }
+  }
+]

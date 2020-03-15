@@ -1,0 +1,638 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Mushok 6.3 (New)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+
+        @page {
+            size: Letter;
+            margin: 2mm 0 2mm 0;
+            counter-increment: page;
+        }
+
+
+        .style_29 {
+            font-size: 9.5pt;
+            padding: 1pt 3pt;
+            border: #000000 !important;
+        }
+
+        .style_28 {
+            font-weight: normal;
+        }
+
+        .style_25 {
+            font-weight: bold;
+            font-size: 9pt;
+        }
+
+        .style_24 {
+            font-weight: bold;
+            font-size: 10pt;
+            padding: 0% 1%;
+            border: thin solid black;
+        }
+
+        .style_27 {
+            font-size: 9.5pt;
+            padding: 1pt 3pt;
+            border: thin solid rgb(0, 0, 0);
+        }
+
+        .style_26 {
+            font-family: sans-serif;
+        }
+
+        .style_8 {
+            font-family: sans-serif;
+            font-size: 9pt;
+            color: rgb(96, 96, 96);
+        }
+
+        .style_9 {
+            font-family: sans-serif;
+            font-size: 9pt;
+            color: rgb(96, 96, 96);
+        }
+
+        .style_7 {
+            margin-top: 20pt;
+        }
+
+        .style_0 {
+            font-family: sans-serif;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            font-size: 10pt;
+            color: black;
+            text-indent: 0em;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            white-space: normal;
+            line-height: normal;
+        }
+
+        .style_21 {
+            font-family: Nikosh, serif;
+        }
+
+        .style_1 {
+            font-weight: bold;
+        }
+
+        .style_23 {
+            font-size: 10pt;
+        }
+
+        .style_22 {
+            font-weight: bold;
+            font-size: 10pt;
+        }
+
+        .style_4 {
+            margin-bottom: 15pt;
+        }
+
+        .style_5 {
+            font-weight: bold;
+        }
+
+        .style_2 {
+            font-weight: bold;
+        }
+
+        .style_3 {
+            font-family: sans-serif;
+            font-size: 9pt;
+            color: rgb(96, 96, 96);
+        }
+
+        .style_35 {
+            font-size: 9.5pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border: thin solid rgb(0, 0, 0);
+        }
+
+        .style_37 {
+            font-size: 9.5pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border: thin solid rgb(0, 0, 0);
+        }
+
+        .style_32 {
+            font-weight: normal;
+        }
+
+        .style_31 {
+            font-size: 6pt;
+        }
+
+        .style_33 {
+            font-size: 9.5pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border: thin solid rgb(0, 0, 0);
+        }
+
+        .style_30 {
+            font-weight: normal;
+        }
+
+        .style_47 {
+            font-family: Nikosh, serif;
+        }
+
+        .style_46 {
+            font-size: 9.5pt;
+            margin-right: 0pt;
+            margin-left: 0pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border-right: thin solid rgb(0, 0, 0);
+            border-bottom: thin solid rgb(0, 0, 0);
+            border-left: thin solid rgb(0, 0, 0);
+        }
+
+        .style_49 {
+            font-size: 9.5pt;
+            margin-right: 0pt;
+            margin-left: 0pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border-right: thin solid rgb(255, 255, 255);
+            border-bottom: thin solid rgb(255, 255, 255);
+            border-left: thin solid rgb(255, 255, 255);
+        }
+
+        .style_48 {
+            font-weight: bold;
+        }
+
+        .style_43 {
+            font-weight: bold;
+            {#border-top: thin double black;#}
+        }
+
+        .style_42 {
+            font-size: 9.5pt;
+            margin-right: 0pt;
+            margin-left: 0pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border: thin solid rgb(0, 0, 0);
+        }
+
+        .style_41 {
+            font-family: Nikosh, serif;
+        }
+
+        .style_40 {
+            font-size: 9.5pt;
+            margin-right: 0pt;
+            margin-left: 0pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+            border-right: thin solid rgb(0, 0, 0);
+            border-left: thin solid rgb(0, 0, 0);
+        }
+
+        .style_18 {
+            font-family: Nikosh, serif;
+        }
+
+        .style_17 {
+            font-size: 9.5pt;
+            padding: 1pt 3pt;
+            border-top: thin solid rgb(255, 255, 255);
+            border-right: thin solid rgb(255, 255, 255);
+            border-bottom: thin solid rgb(0, 0, 0);
+            border-left: thin solid rgb(255, 255, 255);
+        }
+
+        .style_14 {
+            padding: 1%;
+        }
+
+        .style_13 {
+            margin-top: 20pt;
+        }
+
+        .style_16 {
+            font-family: Nikosh, serif;
+            font-weight: bold;
+        }
+
+        .style_15 {
+            border: thin solid rgb(128, 128, 128);
+        }
+
+        .style_10 {
+            margin-top: 20pt;
+            padding-right: 3pt;
+            padding-left: 3pt;
+        }
+
+        .style_12 {
+            margin-top: 20pt;
+            padding-right: 1pt;
+            padding-left: 1pt;
+        }
+
+        .style_11 {
+            margin-top: 20pt;
+        }
+
+        .style_50 {
+            font-family: Nikosh, serif;
+        }
+    </style>
+    <script type="text/javascript">
+        //<![CDATA[
+        function redirect(target, url) {
+            if (target == '_blank') {
+                open(url);
+            } else if (target == '_top') {
+                window.top.location.href = url;
+            } else if (target == '_parent') {
+                location.href = url;
+            } else if (target == '_self') {
+                location.href = url;
+            } else {
+                open(url);
+            }
+        }
+
+        //]]>
+    </script>
+</head>
+<body class="style_0" style=" margin:0;">
+<table cellpadding="0" rules="none" border="0"
+       style="empty-cells: show; width:8.5in; overflow: hidden; table-layout:fixed;">
+    <col></col>
+    <tr>
+        <td valign="top">
+            <table style="border-collapse: collapse; empty-cells: show; width: 100%; overflow:hidden; table-layout:fixed;">
+                <col></col>
+                <tr valign="top">
+                    <td class="style_14" style=" overflow:hidden;">
+                        <table class="style_15"
+                               style="border-collapse: collapse; empty-cells: show; width: 100%; overflow:hidden; table-layout:fixed;"
+                               id="__bookmark_1">
+                            <col style=" width: 4%;"></col>
+                            <col style=" width: 27%;"></col>
+                            <col style=" width: 6%;"></col>
+                            <col style=" width: 7%;"></col>
+                            <col style=" width: 9%;"></col>
+                            <col style=" width: 11%;"></col>
+                            <col style=" width: 8%;"></col>
+                            <col style=" width: 7%;"></col>
+                            <col style=" width: 10%;"></col>
+                            <col style=" width: 11%;"></col>
+                            <tr class="style_16" valign="top" align="center">
+                                <th class="style_17" colspan="10" style=" overflow:hidden;" align="left">
+                                    <table class="style_18"
+                                           style="border-collapse: collapse; empty-cells: show; width: 100%; overflow:hidden; table-layout:fixed;"
+                                           id="__bookmark_2">
+                                        <col style=" width: 10%;"></col>
+                                        <col style=" width: 2%;"></col>
+                                        <col style=" width: 33%;"></col>
+                                        <col style=" width: 15%;"></col>
+                                        <col style=" width: 2%;"></col>
+                                        <col style=" width: 38%;"></col>
+                                        <tr valign="top">
+                                            <td colspan="6" style=" overflow:hidden;" align="left">
+                                                <table class="style_18"
+                                                       style="border-collapse: collapse; empty-cells: show; width: 100%; overflow:hidden; table-layout:fixed;"
+                                                       id="__bookmark_3">
+                                                    <col></col>
+                                                    <tr valign="top">
+                                                        <td style=" overflow:hidden;" align="right">
+                                                            <div class="style_21" style=" text-align:center;">
+                                                                গণপ্রজাতন্ত্রী বাংলাদেশ সরকার
+                                                            </div>
+                                                            <div class="style_22" style=" text-align:center;">জাতীয়
+                                                                রাজস্ব বোর্ড
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td class="style_23" style=" overflow:hidden;" align="right">
+                                                            <span class="style_24">মূসক ৬.৩</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td style=" overflow:hidden;">
+                                                            <div class="style_25" style=" text-align:center;">কর
+                                                                চালানপত্র&#xa0;
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr valign="top">
+                                                        <td style=" overflow:hidden;">
+                                                            <div style=" text-align:center;">[বিধি ৪০ এর উপ-বিধি (১) এর
+                                                                দফা (গ) ও দফা (চ) দ্রষ্টব্য]
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>নিবন্ধিত ব্যক্তির নাম</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">Expo Group</div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>নিবন্ধিত ব্যক্তির বিআইএন</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">DVat-111014</div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>চালানপত্র ইস্যুর ঠিকানা</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">
+                                                    <div style="visibility:hidden">&#xa0;</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                            <td style=" overflow:hidden;" align="left"></td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>ক্রেতার নাম</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">Consumer Enterprise</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>চালানপত্র নম্বর&#xa0;</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">1001</div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>ক্রেতার বিআইএন</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">123456789</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>ইস্যুর তারিখ</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>২০১৯-০৭-০৭</div>
+                                            </td>
+                                        </tr>
+                                        <tr valign="top">
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>পণ্যের গন্তব্যস্থল</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26" id="__bookmark_4">House: 16, Road: 30, Section: 1,&#xa0;<br/>Thana:
+                                                    Gulshan, P.O. Gulshan Model Town,&#xa0;<br/>Dhaka-1212<br/>Division:
+                                                    Dhaka, Bangladesh.
+                                                </div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div>ইস্যুর সময়</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div style=" text-align:center;">:</div>
+                                            </td>
+                                            <td style=" overflow:hidden;" align="left">
+                                                <div class="style_26">Jul 26, 2019 7:33 PM</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                            <tr class="style_16" valign="top" align="center">
+                                <th class="style_27" style=" overflow:hidden;" align="left">
+                                    <div class="style_28" style=" text-align:center;">ক্রমিক সংখ্যা</div>
+                                </th>
+                                <th class="style_27" style=" overflow:hidden;" align="left">
+                                    <div class="style_28" style=" text-align:center;">পণ্য বা সেবার বর্ণনা (প্রযোজ্য
+                                        ক্ষেত্রে ব্র্যান্ড নামসহ)
+                                    </div>
+                                </th>
+                                <th class="style_27" style=" overflow:hidden;" align="left">
+                                    <div class="style_28" style=" text-align:center;">সরবরাহের একক&#xa0;</div>
+                                </th>
+                                <th class="style_27" style=" overflow:hidden;" align="left">
+                                    <div class="style_28" style=" text-align:center;">পরিমাণ</div>
+                                </th>
+                                <th class="style_29" style=" overflow:hidden;" align="center">
+                                    <span class="style_30" style=" text-align:center;">একক মূল্য</span>
+                                    <span class="style_31" style=" text-align:center;">১</span>
+                                    <div class="style_28" style=" text-align:center;">(টাকায়)</div>
+                                </th>
+                                <th class="style_29" style=" overflow:hidden;" align="center">
+                                    <span class="style_30" style=" text-align:center;">মোট মূল্য</span>
+                                    <span class="style_31" style=" text-align:center;">১</span>
+                                    <div class="style_28" style=" text-align:center;">(টাকায়)</div>
+                                </th>
+                                <th class="style_29" style=" overflow:hidden;" align="center">
+                                    <div class="style_28" style=" text-align:center;">সম্পূরক শুল্কের পরিমাণ (টাকায়)
+                                    </div>
+                                </th>
+                                <th class="style_29" style=" overflow:hidden;" align="center">
+                                    <div class="style_28" style=" text-align:center;">মূল্য সংযোজন করের হার/সুনির্দিষ্ট
+                                        কর
+                                    </div>
+                                </th>
+                                <th class="style_27" style=" overflow:hidden;" align="left">
+                                    <div class="style_28" style=" text-align:center;">মূল্য সংযোজন কর/সুনির্দিষ্ট কর এর
+                                        পরিমাণ (টাকায়)
+                                    </div>
+                                </th>
+                                <th class="style_29" style=" overflow:hidden;" align="center">
+                                    <div class="style_32">সকল প্রকার শুল্ক ও করসহ মূল্য</div>
+                                </th>
+                            </tr>
+                            {% for dummy_service in dummy_services %}
+                                <tr valign="top">
+                                    <td class="style_33" style=" overflow:hidden;">
+                                        <div style="display: none;">{{ bangla_converter(loop.index) }}</div>
+                                        <div style=" text-align:center;">{{ bangla_converter(loop.index) }}</div>
+                                    </td>
+                                    <td class="style_35" style=" overflow:hidden;" align="left">
+                                        <span>&#xa0;</span>
+                                        <span>{{ dummy_service.product_name }}</span>
+                                    </td>
+                                    <td class="style_37" style=" overflow:hidden;" align="center">
+                                        <div>{{ dummy_service.unit_type }}</div>
+                                    </td>
+                                    <td class="style_37" style=" overflow:hidden;" align="center">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.quantity) }}</div>
+                                        <div style="display: none; text-align:right;">{{ bangla_converter(dummy_service.quantity) }}</div>
+                                    </td>
+                                    <td class="style_37" style=" overflow:hidden;" align="center">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.per_unit_price) }}</div>
+                                        <div style="display: none;">{{ bangla_converter(dummy_service.per_unit_price) }}</div>
+                                    </td>
+                                    <td class="style_37" style=" overflow:hidden;" align="center">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.unit_total) }}</div>
+                                        <div style="display: none;">{{ bangla_converter(dummy_service.unit_total) }}</div>
+                                    </td>
+                                    <td class="style_37" style=" overflow:hidden;" align="center">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.subsidiary_vat) }}</div>
+                                        <div style="display: none; text-align:right;">{{ bangla_converter(dummy_service.subsidiary_vat) }}</div>
+                                    </td>
+                                    <td class="style_33" style=" overflow:hidden;">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.vat_per_unit) }}</div>
+                                        <div style="display: none;">{{ bangla_converter(dummy_service.vat_per_unit) }}</div>
+                                    </td>
+                                    <td class="style_33" style=" overflow:hidden;">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.vat_amount) }}</div>
+                                        <div style="display: none;">{{ bangla_converter(dummy_service.vat_amount) }}</div>
+                                    </td>
+                                    <td class="style_33" style=" overflow:hidden;">
+                                        <div style=" text-align:right;">{{ bangla_converter(dummy_service.price_after_vat) }}</div>
+                                        <div style="display: none;">{{ bangla_converter(dummy_service.price_after_vat) }}</div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            <tr valign="top">
+                                <td class="style_40" colspan="5" style=" overflow:hidden;">
+                                    <div class="style_41" style=" text-align:right;">সর্বমোট</div>
+                                </td>
+                                <td class="style_42" style=" overflow:hidden;">
+                                    <div class="style_43"
+                                         style=" text-align:right;">{{ bangla_converter(total_price_before_vat) }}</div>
+                                    <div style="display: none;">{{ bangla_converter(total_price_before_vat) }}</div>
+                                </td>
+                                <td class="style_42" style=" overflow:hidden;">
+                                    <div class="style_43"
+                                         style=" text-align:right;">{{ bangla_converter(total_subsidiary_vat) }}</div>
+                                    <div style="display: none; text-align:right;">{{ bangla_converter(total_subsidiary_vat) }}</div>
+                                </td>
+                                <td class="style_42" style=" overflow:hidden;"></td>
+                                <td class="style_42" style=" overflow:hidden;">
+                                    <div class="style_43"
+                                         style=" text-align:right;">{{ bangla_converter(total_vat) }}</div>
+                                    <div style="display: none; text-align:right;">{{ bangla_converter(total_vat) }}</div>
+                                </td>
+                                <td class="style_42" style=" overflow:hidden;">
+                                    <div class="style_43"
+                                         style=" text-align:right;">{{ bangla_converter(total_price_after_vat) }}</div>
+                                    <div style="display: none;">{{ bangla_converter(total_price_after_vat) }}</div>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td class="style_46" colspan="5" style=" overflow:hidden;" align="right">
+                                    <span class="style_47"
+                                          style=" text-align:right;">উৎসে কর্তনযোগ্য করের পরিমাণ&#xa0;</span>
+                                </td>
+                                <td class="style_46" colspan="5" style=" overflow:hidden;" align="right">
+                                    <div class="style_48" id="__bookmark_5" style=" text-align:right;">০.০০</div>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td class="style_49" colspan="10" style=" overflow:hidden;" align="right">
+                                    <div class="style_50" style=" text-align:left;"><br/>প্রতিষ্ঠান কর্তৃপক্ষের
+                                        দায়িত্বপ্রাপ্ত ব্যক্তির নামঃ
+                                    </div>
+                                    <div class="style_50" style=" text-align:left;">পদবীঃ</div>
+                                    <div class="style_50" style=" text-align:left;">স্বাক্ষরঃ</div>
+                                    <div class="style_50" style=" text-align:left;">সীলঃ</div>
+                                    <div class="style_50" style=" text-align:left;"><br/>* উৎসে কর্তনযোগ্য সরবরাহের
+                                        ক্ষেত্রে ফর্মটি সমন্বিত কর চালানপত্র ও উৎসে কর কর্তন সনদপত্র হিসেবে বিবেচিত হইবে
+                                        এবং উৎসে কর্তনযোগ্য সরবরাহের ক্ষেত্রে প্রযোজ্য হবে।&#xa0;
+                                    </div>
+                                    <div class="style_50" style=" text-align:left;"><br/><br/>___________________________________________<br/>১।
+                                        সকল প্রকার কর ব্যতীত মূল্য।&#xa0;&#xa0;
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table style="border-collapse: collapse; empty-cells: show; width: 100%; overflow:hidden; table-layout:fixed;">
+                <col style=" width: 1.5in;"></col>
+                <col></col>
+                <col style=" width: 1.5in;"></col>
+                <tr valign="top">
+                    <td class="style_3" colspan="3" style=" overflow:hidden;"></td>
+                </tr>
+                <tr valign="top">
+                    <td class="style_3" style=" overflow:hidden;">
+                        <div class="style_7">07/26/2019 7:33</div>
+                    </td>
+                    <td class="style_8" style=" overflow:hidden;" align="center" valign="bottom">
+                        <div>
+                            <div style="visibility:hidden">&#xa0;</div>
+                        </div>
+                    </td>
+                    <td class="style_9" style=" overflow:hidden;" align="right" valign="bottom">
+                        <span class="style_10" style=" text-align:right;">Page&#xa0;</span>
+                        <span class="style_11">1</span>
+                        <span class="style_12" style=" text-align:right;">&#xa0;of&#xa0;</span>
+                        <span class="style_13" style=" text-align:right;">1</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
