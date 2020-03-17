@@ -22,19 +22,12 @@ LOGIN_REDIRECT_URL = '/'
 # Application definition
 EXTERNAL_APPS = [
     'rest_framework',
-    'django_rest_passwordreset',
-    'corsheaders',
     'auditlog'
 ]
 
 PROJECT_APPS = [
-    'apps.common',
+    'apps.youtube',
     'apps.home',
-    'apps.inventory',
-    'apps.parties',
-    'apps.product_and_service',
-    'apps.sales',
-    'apps.user',
 ]
 
 INSTALLED_APPS = ['django.contrib.admin',
@@ -46,7 +39,6 @@ INSTALLED_APPS = ['django.contrib.admin',
                   ] + EXTERNAL_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -62,22 +54,11 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
     'SEARCH_PARAM': 'filter',
     'ORDERING_PARAM': 'sort'
-}
-JWT_AUTH = {
-
-    'JWT_VERIFY': True,
-    'JWT_VERIFY_EXPIRATION': True,
-    'JWT_RESPONSE_PAYLOAD_HANDLER':
-        'apps.api.views.jwt_response_payload_handler',
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=500),
-    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
-
 }
 
 ROOT_URLCONF = 'conf.urls'
@@ -131,21 +112,12 @@ DATABASES = {
         'PORT': env('DB_PORT'),
     }
 }
-
-# ----------------------Live------------------------------
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'vms_1',
-#         'USER': 'vms',
-#         'PASSWORD': 'vat1234',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'task'),
 #     }
 # }
-
-# Password validation
-# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -183,19 +155,3 @@ USE_L10N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'user.UserProfile'
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = (
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'Cache-Control',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-)

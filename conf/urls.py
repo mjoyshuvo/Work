@@ -10,7 +10,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
-    url(r'^api/v1/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
     url(r'^api/v1/', include(api_urls, 'api_v1'))
 ]
 

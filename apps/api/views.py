@@ -3,7 +3,6 @@ from functools import reduce
 from django.db.models import Q
 from rest_framework import viewsets, permissions
 from rest_framework.filters import SearchFilter, OrderingFilter
-from apps.user.views import UserSerializer
 from apps.api.Pagination import CustomResultsSetPagination
 
 
@@ -73,14 +72,3 @@ class BaseViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = CustomResultsSetPagination
 
-
-def jwt_response_payload_handler(token, user=None, request=None):
-    """
-    Returns the response data for both the login and refresh views.
-    Override to return a custom response such as including the
-    serialized representation of the User.
-    """
-    return {
-        'token': token,
-        'user': UserSerializer(user, context={'request': request}).data
-    }
