@@ -1,21 +1,21 @@
-import requests
-
 from django.core.management.base import BaseCommand, CommandError
+from googleapiclient.discovery import build
+from apps.youtube.models import Channel, Video
+
 
 class Command(BaseCommand):
     help = 'Scrap Youtube'
 
     def handle(self, *args, **kwargs):
-        from googleapiclient.discovery import build
         youtube_api_key = 'AIzaSyAwDzi-jy4pajYALp1H3d3aia8-sdk5qP8'
         youtube = build('youtube', 'v3', developerKey=youtube_api_key)
+        channel_list = Channel.objects.values_list('channel_uid', flat=True)
+        # lis = ['UCeLHszkByNZtPKcaVXOCOQQ']
 
-        lis = ['UCeLHszkByNZtPKcaVXOCOQQ']
-
-        for i in lis:
+        for i in channel_list:
+            channel_object = Channel.objects.get(channel_uid=i)
             channels_response = youtube.channels().list(part="snippet,contentDetails,statistics,topicDetails,status",
                                                         id=i).execute()
-
             for channel in channels_response['items']:
                 uploads_list_id = channel["contentDetails"]["relatedPlaylists"]["uploads"]
                 playlistitems_list_request = youtube.playlistItems().list(
@@ -23,21 +23,38 @@ class Command(BaseCommand):
                     part="snippet",
                     maxResults=50
                 )
-                while playlistitems_list_request:
-                    playlistitems_list_response = playlistitems_list_request.execute()
-                    for playlist_item in playlistitems_list_response["items"]:
-                        video_id = playlist_item["snippet"]["resourceId"]["videoId"]
-                        request = youtube.videos().list(
-                            part="snippet,contentDetails,statistics",
-                            id=video_id
-                        )
-                        response = request.execute()
+                playlistitems_list_response = playlistitems_list_request.execute()
+                for playlist_item in playlistitems_list_response["items"]:
+                    video_uid = playlist_item["snippet"]["resourceId"]["videoId"]
+                    request = youtube.videos().list(
+                        part="snippet,contentDetails,statistics",
+                        id=video_uid
+                    )
+                    response = request.execute()
 
-                        print(video_id)
-                        tags = response['items'][0]['snippet']['tags']
-                        print(tags)
-                        statistics = response['items'][0]['statistics']
-                        print(statistics)
-                        view_count = response['items'][0]['statistics']['viewCount']
-                        print(view_count)
-                        print("##########################")
+                    tags = response['items'][0]['snippet']['tags']
+                    print(tags)
+                    title = response['items'][0]['snippet']['title']
+                    statistics = response['items'][0]['statistics']
+                    view_count = statistics['viewCount']
+                    like_count = statistics['likeCount']
+                    comment_count = statistics['commentCount']
+                    dislike_count = statistics['dislikeCount']
+                    favorite_count = statistics['favoriteCount']
+                    try:
+                        video = Video.objects.get(video_uid=video_uid)
+                        video.name = title
+                        video.tags = tags
+                        video.view_count = view_count
+                        video.like_count = like_count
+                        video.comment_count = comment_count
+                        video.dislike_count = dislike_count
+                        video.favorite_count = favorite_count
+                        video.save()
+                    except Video.DoesNotExist:
+                        video = Video.objects.create(name=title, channel=channel_object, video_uid=video_uid,
+                                                     tags=tags,
+                                                     view_count=view_count, like_count=like_count,
+                                                     dislike_count=dislike_count, favorite_count=favorite_count,
+                                                     comment_count=comment_count)
+                    print("##########################")
