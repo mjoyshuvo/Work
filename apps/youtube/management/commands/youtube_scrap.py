@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand, CommandError
 from googleapiclient.discovery import build
 from apps.youtube.models import Channel, Video
+import statistics
 
 
 class Command(BaseCommand):
@@ -10,7 +11,7 @@ class Command(BaseCommand):
         youtube_api_key = 'AIzaSyAwDzi-jy4pajYALp1H3d3aia8-sdk5qP8'
         youtube = build('youtube', 'v3', developerKey=youtube_api_key)
         channel_list = Channel.objects.values_list('channel_uid', flat=True)
-        # lis = ['UCeLHszkByNZtPKcaVXOCOQQ']
+        # channel_list = ['UCeLHszkByNZtPKcaVXOCOQQ']
 
         for i in channel_list:
             channel_object = Channel.objects.get(channel_uid=i)
@@ -57,4 +58,12 @@ class Command(BaseCommand):
                                                      view_count=view_count, like_count=like_count,
                                                      dislike_count=dislike_count, favorite_count=favorite_count,
                                                      comment_count=comment_count)
-                    print("##########################")
+
+        """ Video performance """
+        videos = Video.objects.all()
+        views_list = videos.values_list('view_count', flat=True)
+        median = statistics.median(views_list)
+        for video in videos:
+            video.performance = video.view_count / median
+            video.save()
+
