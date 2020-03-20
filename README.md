@@ -27,7 +27,7 @@ python manage.py migrate
 
 7. Import Channel data
 ```
-python manage.py loaddata import_sql/channel.json
+python manage.py loaddata import_sql/channels.json
 ```
 8. Run project 
 ```
