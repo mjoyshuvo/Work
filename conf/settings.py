@@ -137,14 +137,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-EMAIL_BACKEND = env('EMAIL_BACKEND')
-# EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = env('EMAIL_USE_TLS')
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 

@@ -1,8 +1,7 @@
 from django.core.management.base import BaseCommand, CommandError
 from googleapiclient.discovery import build
 from apps.youtube.models import Channel, Video
-import statistics
-
+import json
 
 class Command(BaseCommand):
     help = 'Scrap Youtube'
@@ -60,6 +59,8 @@ class Command(BaseCommand):
                                                      comment_count=comment_count)
 
         """ Video performance """
+        import statistics
+
         videos = Video.objects.all()
         views_list = videos.values_list('view_count', flat=True)
         median = statistics.median(views_list)

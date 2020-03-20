@@ -27,7 +27,7 @@ class Video(models.Model):
     favorite_count = models.IntegerField(null=True, blank=True)
     dislike_count = models.IntegerField(null=True, blank=True)
     # statistics = JSONField()
-    performance = models.FloatField(default=0, null=True, blank=True)
+    performance = models.DecimalField(default=0, null=True, blank=True, decimal_places=2, max_digits=10)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

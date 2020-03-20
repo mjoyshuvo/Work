@@ -32,9 +32,15 @@ class VideoViewSet(BaseViewSet):
     def get_queryset(self):
         queryset = Video.objects.all().order_by('id')
         tags = self.request.query_params.get('tags')
+        performance = self.request.query_params.get('performance')
         """ Filter with Tags """
         # EX: http://127.0.0.1:8000/api/v1/youtube/videos/?tags=post malone, posty
         if tags:
             tags = tags.split(", ")
             queryset = Video.objects.filter(tags__contains=[tags])
+
+        """ Filter with Performance """
+        # EX: http://127.0.0.1:8000/api/v1/youtube/videos/?performance=1.00
+        if performance:
+            queryset = queryset.filter(performance=performance)
         return queryset
